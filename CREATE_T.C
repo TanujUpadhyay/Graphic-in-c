@@ -1,0 +1,110 @@
+
+#include<graphics.h>
+#include<conio.h>
+main()
+{
+int a,bb;
+int x=50,y=130,lx=65,ly=130,j=120,e,s;
+clrscr();
+a=DETECT;
+initgraph(&a,&bb,"c:\\turboc3\\bgi");
+cleardevice();
+setcolor(12);
+while(lx<=230)
+{
+	delay(j);
+	line(x,y,lx,ly);
+	lx+=10;
+}
+ly=130;                     //T
+while(ly<=300)
+{
+	delay(j);
+	line(120,y,120,ly );
+	ly+=10;
+}
+ly=160;
+lx=190;
+s=190;
+e=160;
+while(ly<=300)
+{
+	delay(j);                  // A
+	line(190,160,lx,ly);
+	line(190,160,s,e);
+	ly+=5;
+	lx-=2;
+	s+=2;
+	e+=5;
+}
+lx=160;
+while(lx<=220)
+{
+	delay(j);
+	line(160,240,lx,240);
+	lx+=5;
+}
+
+ly=160;
+e=300;
+x=270;
+y=160;
+while(ly<=300)
+{
+	delay(j);                      //N
+	line(270,160,270,ly);
+	line(270,160,x,y);
+	line(355,300,355,e);
+	x+=3;
+	y+=5;
+	ly+=5;
+	e-=5;
+}
+ly=160;
+while(ly<=300)
+{
+	delay(j);
+	line(390,160,390,ly);
+	ly+=5;
+}
+lx=390;                                  //U
+while(lx<=470)
+{
+	delay(j);
+	line(390,300,lx,300);
+	lx+=5;
+}
+ly=300;
+lx-=4;
+while(ly>=160)
+{
+	delay(j);
+	line(lx,300,lx,ly);
+	ly-=5;
+}
+ly=240;
+lx=500;
+while(ly<=300)
+{
+	delay(j);
+	line(lx,240,lx,ly);
+	ly+=5;
+}                                      // J
+lx=500;
+while(lx<=560)
+{
+	delay(j);
+	line(500,300,lx,300);
+	lx+=5;
+}
+ly=300;
+while(ly>=160)
+{
+	delay(j);
+	line(lx-5,300,lx-5,ly);
+	ly-=5;
+}
+lx-=10;
+line(lx,140,lx+8,140);
+getch();
+}
